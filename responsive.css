@@ -218,10 +218,49 @@ section{
 
 .nav-menu{
 
-    display:none;
+    position:fixed;
+    top:85px;
+    left:-100%;
+    width:280px;
+    height:calc(100vh - 85px);
+
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:25px;
+
+    padding:40px 25px;
+
+    transition:.35s ease;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    z-index:999;
 
 }
 
+.nav-menu.active{
+
+    left:0;
+
+}
+
+.nav-menu li{
+
+    width:100%;
+
+}
+
+.nav-menu a{
+
+    display:block;
+    width:100%;
+    font-size:17px;
+
+}
 .nav-buttons{
 
     display:none;
