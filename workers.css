@@ -1,0 +1,878 @@
+/*==========================================================
+    WORKERS PAGE
+    KaamMilGya
+==========================================================*/
+
+
+/*==========================================================
+                PAGE HERO
+==========================================================*/
+
+.page-hero{
+
+    padding:180px 0 100px;
+
+    background:linear-gradient(
+        135deg,
+        #eff6ff,
+        #ffffff
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.page-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    background:rgba(37,99,235,.08);
+
+    border-radius:50%;
+
+    top:-180px;
+
+    right:-120px;
+
+}
+
+.page-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(16,185,129,.08);
+
+    border-radius:50%;
+
+    bottom:-150px;
+
+    left:-120px;
+
+}
+
+.page-hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.page-hero h1{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:3.6rem;
+
+    margin:20px 0;
+
+    color:var(--dark);
+
+}
+
+.page-hero p{
+
+    color:var(--gray);
+
+    font-size:1.1rem;
+
+}
+
+
+/*==========================================================
+                SEARCH FILTER
+==========================================================*/
+
+.worker-search{
+
+    margin-top:-60px;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.search-wrapper{
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.filter-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px 20px;
+
+    background:#f8fafc;
+
+    border:1px solid #edf2f7;
+
+    border-radius:15px;
+
+}
+
+.filter-box i{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+}
+
+.filter-box input,
+
+.filter-box select{
+
+    width:100%;
+
+    background:transparent;
+
+    font-size:15px;
+
+    color:var(--dark);
+
+    border:none;
+
+    outline:none;
+
+}
+
+
+/*==========================================================
+                WORKER LIST
+==========================================================*/
+
+.workers-list{
+
+    background:#f8fafc;
+
+}
+
+.workers-grid{
+    
+    display:grid;
+    
+    grid-template-columns:repeat(4,1fr);
+    
+    gap:35px;
+    
+}
+
+/* Tablet */
+@media(max-width:992px){
+
+    .workers-grid{
+        
+        grid-template-columns:repeat(2,1fr);
+        
+    }
+
+}
+
+/* Mobile */
+@media(max-width:576px){
+
+    .workers-grid{
+        
+        grid-template-columns:1fr;
+        
+    }
+
+}
+
+
+
+
+/*==========================================================
+                WORKER CARD
+==========================================================*/
+
+.worker-card{
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+}
+
+.worker-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+
+/*==========================================================
+                IMAGE
+==========================================================*/
+
+.worker-image{
+
+    position:relative;
+
+    height:280px;
+
+}
+
+.worker-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.verified-badge{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    background:#10b981;
+
+    color:#ffffff;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.available{
+
+    position:absolute;
+
+    right:20px;
+
+    top:20px;
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+}
+
+
+/*==========================================================
+                CONTENT
+==========================================================*/
+
+.worker-content{
+
+    padding:30px;
+
+}
+
+.worker-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.worker-header h3{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--dark);
+
+}
+
+.rating{
+
+    color:#f59e0b;
+
+    font-weight:600;
+
+}
+
+.profession{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.worker-details{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.worker-details span{
+
+    color:var(--gray);
+
+}
+
+.worker-details i{
+
+    width:25px;
+
+    color:var(--primary);
+
+}
+
+
+/*==========================================================
+                BUTTONS
+==========================================================*/
+
+.worker-actions{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.worker-actions .btn-primary{
+
+    flex:1;
+
+    justify-content:center;
+
+}
+
+.btn-whatsapp{
+
+    width:55px;
+
+    height:55px;
+
+    background:#25D366;
+
+    color:#ffffff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    transition:.35s;
+
+}
+
+.btn-whatsapp:hover{
+
+    transform:scale(1.1);
+
+}
+
+/*==========================================================
+                    PAGINATION
+==========================================================*/
+
+.workers-pagination{
+
+    background:#ffffff;
+
+    padding:70px 0;
+
+}
+
+.pagination-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+.results-count p{
+
+    font-size:16px;
+
+    color:var(--gray);
+
+}
+
+.results-count strong{
+
+    color:var(--dark);
+
+}
+
+.sort-filter{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.sort-filter label{
+
+    font-weight:600;
+
+    color:var(--dark);
+
+}
+
+.sort-filter select{
+
+    padding:14px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.sort-filter select:hover{
+
+    border-color:var(--primary);
+
+}
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.page-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f8fafc;
+
+    color:var(--dark);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.page-btn:hover{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    transform:translateY(-3px);
+
+}
+
+.page-btn.active{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+}
+
+
+/*==========================================================
+                    CTA SECTION
+==========================================================*/
+
+.worker-cta{
+
+    padding:100px 0;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+}
+
+.cta-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+    color:#ffffff;
+
+}
+
+.cta-content{
+
+    flex:1;
+
+}
+
+.worker-cta .section-tag{
+
+    background:rgba(255,255,255,.15);
+
+    color:#ffffff;
+
+}
+
+.cta-content h2{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:2.8rem;
+
+    margin:20px 0;
+
+}
+
+.cta-content p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    max-width:650px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.worker-cta .btn-primary{
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+}
+
+.worker-cta .btn-primary:hover{
+
+    background:#f8fafc;
+
+}
+
+.worker-cta .btn-secondary{
+
+    border:2px solid #ffffff;
+
+    color:#ffffff;
+
+}
+
+.worker-cta .btn-secondary:hover{
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+}
+
+
+/*==========================================================
+                RESPONSIVE
+==========================================================*/
+
+@media(max-width:1200px){
+
+.search-wrapper{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:992px){
+
+.workers-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.cta-wrapper{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.cta-buttons{
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.page-hero{
+
+    padding:150px 0 80px;
+
+}
+
+.page-hero h1{
+
+    font-size:2.8rem;
+
+}
+
+.search-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.pagination-top{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.sort-filter{
+
+    width:100%;
+
+}
+
+.sort-filter select{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.page-hero h1{
+
+    font-size:2.2rem;
+
+}
+
+.worker-image{
+
+    height:240px;
+
+}
+
+.worker-content{
+
+    padding:22px;
+
+}
+
+.worker-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+.worker-actions{
+
+    flex-direction:column;
+
+}
+
+.worker-actions .btn-primary,
+
+.worker-actions .btn-secondary{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.btn-whatsapp{
+
+    width:100%;
+
+    border-radius:12px;
+
+}
+
+.pagination{
+
+    flex-wrap:wrap;
+
+}
+
+.cta-content h2{
+
+    font-size:2rem;
+
+}
+
+.cta-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+}
+
+.cta-buttons a{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:400px){
+
+.page-hero h1{
+
+    font-size:1.9rem;
+
+}
+
+.page-hero p{
+
+    font-size:15px;
+
+}
+
+.worker-image{
+
+    height:200px;
+
+}
+
+.worker-content{
+
+    padding:18px;
+
+}
+
+}
+
+
+/*==========================================================
+                END OF WORKERS.CSS
+==========================================================*/
