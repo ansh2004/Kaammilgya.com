@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>KaamMilGya.com | Find Verified Workers Near You</title>
+
+    <meta name="description"
+        content="Hire verified painters, carpenters, plumbers, electricians and skilled workers near you.">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="assets/css/style.css">
+
+    <link rel="stylesheet"
+        href="assets/css/navbar.css">
+
+    <link rel="stylesheet"
+        href="assets/css/footer.css">
+
+    <link rel="stylesheet"
+        href="assets/css/animations.css">
+
+    <link rel="stylesheet"
+        href="assets/css/responsive.css">
+
+    <link rel="stylesheet"
+        href="assets/css/workers.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER START ================= -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <!-- Logo -->
+
+            <div class="logo">
+
+                <a href="index.html">
+
+                    <img src="assets/images/logo.png" alt="KaamMilGya Logo">
+
+                    <span>KaamMilGya</span>
+
+                </a>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <nav class="navbar">
+
+                <ul class="nav-links">
+
+                    <li><a class="active" href="index.html">Home</a></li>
+
+                    <li><a href="workers.html">Find Workers</a></li>
+
+                    <li><a href="skills.html">Browse Skills</a></li>
+
+                    <li><a href="post-job.html">Post a Job</a></li>
+
+                    <li><a href="become-worker.html">Become a Worker</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Right Side -->
+
+            <div class="header-right">
+
+                <a href="login.html" class="login-btn">
+
+                    Login
+
+                </a>
+
+                <div class="menu-btn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HEADER END ================= -->
+
+    <!-- ================= HERO SECTION START ================= -->
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <div class="page-hero-content">
+
+                <span class="hero-tag">⭐ India's Trusted Worker Hiring Platform</span>
+
+                <h1>Find Verified Workers Near You</h1>
+
+                <p>Hire trusted workers for every job.</p>
+
+            </div>
+
+            <!-- Search + Filters -->
+
+            <div class="worker-search">
+
+                <div class="search-wrapper" role="search">
+
+                    <div class="filter-box search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input id="workerSearch"
+                            type="text"
+                            placeholder="Search by skill, name, city, state...">
+
+                    </div>
+
+                    <div class="filter-box">
+
+                        <i class="fa-solid fa-list"></i>
+
+                        <select id="filterCategory" aria-label="Category">
+
+                            <option value="">Category</option>
+
+                            <option>Electrician</option>
+                            <option>Plumber</option>
+                            <option>Carpenter</option>
+                            <option>Painter</option>
+                            <option>Mason</option>
+                            <option>Driver</option>
+                            <option>Cook</option>
+                            <option>House Maid</option>
+                            <option>AC Technician</option>
+                            <option>Welder</option>
+                            <option>Tailor</option>
+                            <option>Beautician</option>
+                            <option>Mechanic</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="filter-box">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <select id="filterExperience" aria-label="Experience">
+
+                            <option value="">Experience</option>
+
+                            <option value="Fresher">Fresher</option>
+                            <option value="1+">1+</option>
+                            <option value="3+">3+</option>
+                            <option value="5+">5+</option>
+                            <option value="10+">10+</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="filter-box">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <select id="filterLocation" aria-label="Location">
+
+                            <option value="">Location</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="West Bengal">West Bengal</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="filter-box">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        <select id="filterAvailability" aria-label="Availability">
+
+                            <option value="">Availability</option>
+                            <option value="Available Now">Available Now</option>
+                            <option value="Busy">Busy</option>
+                            <option value="Weekend">Weekend</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="filter-box btn-actions">
+
+                        <button class="btn-primary" id="applyFilters" type="button">Apply Filters</button>
+
+                    </div>
+
+                    <div class="filter-box btn-actions">
+
+                        <button class="btn-secondary" id="clearFilters" type="button">Clear Filters</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= HERO SECTION END ================= -->
+
+    <!-- ================= WORKER LIST SECTION START ================= -->
+
+    <section class="workers-list">
+
+        <div class="container">
+
+            <div class="workers-pagination">
+
+                <div class="pagination-top">
+
+                    <div class="results-count" aria-live="polite">
+                        <p>
+                            Showing <strong id="resultsCount">0</strong> workers
+                        </p>
+                    </div>
+
+                    <div class="sort-filter">
+                        <label for="sortOption">Sort</label>
+                        <select id="sortOption">
+                            <option value="newest">Newest</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="salaryAsc">Lowest Salary</option>
+                            <option value="experience">Highest Experience</option>
+                            <option value="alpha">Alphabetical</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Loading -->
+                <div class="loading-wrap" id="loadingWrap" aria-hidden="false">
+                    <div class="loading-spinner" role="status" aria-label="Loading"></div>
+                    <p>Loading workers...</p>
+                </div>
+
+                <!-- No Results -->
+                <div class="no-results" id="noResults" style="display:none;">
+                    <div class="no-results-icon">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                    <h3>No Results Found</h3>
+                    <p>Try adjusting your search and filters.</p>
+                </div>
+
+                <!-- Worker Grid -->
+
+                <div class="workers-grid" id="workersGrid"></div>
+
+                <!-- Pagination -->
+
+                <div class="pagination" id="pagination"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WORKER LIST SECTION END ================= -->
+
+    <!-- ================= PROFILE MODAL ================= -->
+
+    <div class="modal-overlay" id="profileModalOverlay" style="display:none;"></div>
+
+    <div class="worker-modal" id="profileModal" tabindex="-1" style="display:none;" aria-modal="true" role="dialog">
+
+        <div class="modal-header">
+            <h2>Worker Profile</h2>
+            <button class="modal-close" id="closeProfile" type="button" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="modal-body" id="profileModalBody"></div>
+
+    </div>
+
+    <!-- ================= FOOTER START ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-column">
+
+                    <div class="footer-logo">
+
+                        <img src="assets/images/logo.png" alt="KaamMilGya">
+
+                        <h2>KaamMilGya</h2>
+
+                    </div>
+
+                    <p>
+
+                        KaamMilGya helps you find verified painters,
+                        electricians, plumbers, carpenters and skilled workers
+                        near you quickly and safely.
+
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="workers.html">Find Workers</a></li>
+
+                        <li><a href="skills.html">Browse Skills</a></li>
+
+                        <li><a href="post-job.html">Post a Job</a></li>
+
+                        <li><a href="about.html">About Us</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>Popular Skills</h3>
+
+                    <ul>
+
+                        <li><a href="#">Painter</a></li>
+
+                        <li><a href="#">Carpenter</a></li>
+
+                        <li><a href="#">Electrician</a></li>
+
+                        <li><a href="#">Plumber</a></li>
+
+                        <li><a href="#">Cleaner</a></li>
+
+                        <li><a href="#">Mechanic</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>Contact Us</h3>
+
+                    <ul class="contact-info">
+
+                        <li>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Punjab, India
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +91 XXXXX XXXXX
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            WhatsApp Support
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            info@kaammilgya.com
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="newsletter">
+
+                <div>
+
+                    <h3>Subscribe to Our Newsletter</h3>
+
+                    <p>
+
+                        Get updates about new workers and job opportunities.
+
+                    </p>
+
+                </div>
+
+                <form>
+
+                    <input type="email" placeholder="Enter your email">
+
+                    <button type="submit">Subscribe</button>
+
+                </form>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 KaamMilGya.com. All Rights Reserved.
+
+                </p>
+
+                <div>
+
+                    <a href="#">Privacy Policy</a>
+
+                    <a href="#">Terms & Conditions</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ===================== FOOTER END ===================== -->
+
+    <a href="#" class="whatsapp"></a>
+
+    <script src="assets/js/script.js"></script>
+
+    <script src="assets/js/navbar.js"></script>
+
+    <script src="assets/js/animation.js"></script>
+
+    <script src="assets/js/workers.js"></script>
+
+</body>
+
+</html>
+
